@@ -23,4 +23,9 @@ A committee of fine-tuned [MACE](https://github.com/ACEsuit/mace) foundation mod
 
 *Five projects, one discipline: measure what the model actually knows.*
 
+#### Tools
+
+**[glass](https://github.com/DrGregPitch/glass)** — *A chemistry web console, live at [chemistryconsole.glass](https://chemistryconsole.glass).*
+Verified name↔SMILES cross-checking with IUPAC locant numbering, journal-style depiction, and predicted ¹H/¹³C NMR, IR and UV–Vis spectra with GFN2-xTB vibrational normal modes — the working end of the same chemistry.
+
 <sub>📫 pitch.gregory@gmail.com</sub>
