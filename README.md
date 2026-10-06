@@ -1,7 +1,7 @@
 Physical-organic chemist (PhD) building computational chemistry tools and machine-learning models.
 
 **[glass](https://github.com/DrGregPitch/glass)** · [chemistryconsole.glass](https://chemistryconsole.glass)
-A live web console for chemical identity, structure, and spectra. It cross-checks names against SMILES with OPSIN, numbers structures with IUPAC locants, and predicts ¹H/¹³C NMR (nmrshiftdb2 HOSE codes, held-out ¹³C MAE 2.75 ppm), IR and UV–Vis. Vibrational normal modes and electronic structure come from GFN2-xTB; NMR shielding and frontier-orbital surfaces from PySCF at Hartree–Fock. Every method states its own scope and typical error.
+A live web console for chemical identity, structure, and spectra. It cross-checks names against SMILES with OPSIN, numbers structures with IUPAC locants, and predicts ¹H/¹³C NMR (nmrshiftdb2 HOSE codes), IR and UV–Vis. Vibrational normal modes and electronic structure come from GFN2-xTB; NMR shielding and frontier-orbital surfaces from PySCF at Hartree–Fock. Every method states its own scope and typical error.
 
 **[MLIP1](https://github.com/DrGregPitch/MLIP1)**
 Active-learning fine-tuning of a MACE interatomic potential against real DFT (PBE0/def2-SVP). A committee picks which configurations to label; on out-of-distribution configurations this lowers worst-case (p90) force error 24–55% versus random at the same labeling budget, winning all six paired restarts at every budget. Relabelling with DFT also showed that the universal MLIP saturates on distorted geometries, so the force filter built on its predictions had never once fired.
@@ -16,6 +16,6 @@ Polymer property prediction, from linear baselines up to a message-passing GNN, 
 Active learning for formulation: a surrogate and acquisition loop that finds a top-decile solid-polymer electrolyte in ~10–13 experiments where random screening needs 30, on 6,949 literature-measured conductivities (median over 20 restarts). On a controlled synthetic oracle the margin is wider still. Uses polytools as the surrogate and copolybench as the oracle.
 
 **[copolybench](https://github.com/DrGregPitch/copolybench)**
-A benchmark for when copolymer sequence matters, not just composition. Composition-only features stay flat across a 130 °C range driven by blockiness; first-order sequence statistics cut that error about 60%.
+A benchmark for when copolymer sequence matters, not just composition. Composition-only features stay flat across a 130 °C range driven by blockiness; first-order sequence statistics cut that error about 40% (and ~5% on a held-out comonomer-pair split).
 
 pitch.gregory@gmail.com
