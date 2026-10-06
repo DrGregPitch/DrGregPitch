@@ -10,10 +10,10 @@ Active-learning fine-tuning of a MACE interatomic potential against real DFT (PB
 Evaluation for drug-discovery models: scaffold and cluster splits for property prediction, cold drug/target/both splits for binding affinity, and ligand-only / protein-only baselines to separate memorization from real signal.
 
 **[polytools](https://github.com/DrGregPitch/polytools)**
-Polymer property prediction, from linear baselines up to a message-passing GNN, with calibrated uncertainty. On glass-transition data the same model scores 48 °C RMSE on a random split and 126 °C on a scaffold split.
+Polymer property prediction, from linear baselines up to a message-passing GNN, with calibrated uncertainty on non-random splits. The point is honest evaluation: on a real polymer dataset the same gradient-boosting model that scores R² 0.94 on a random split collapses to a negative R² when asked to extrapolate beyond the training range — the gap a single random-split score hides.
 
 **[formulate](https://github.com/DrGregPitch/formulate)**
-Active learning for formulation: a surrogate and acquisition loop that finds a top-decile solid-polymer electrolyte in ~10–13 experiments where random screening needs 30, on 6,949 literature-measured conductivities (median over 20 restarts). On a controlled synthetic oracle the margin is wider still. Uses polytools as the surrogate and copolybench as the oracle.
+Active learning for formulation: a surrogate and acquisition loop that reaches within 10% of the best measured conductivity in ~10–13 experiments where random screening needs ~30, across 6,949 literature-measured conductivities (median over 20 restarts). Uses polytools as the surrogate and copolybench as the oracle.
 
 **[copolybench](https://github.com/DrGregPitch/copolybench)**
 A benchmark for when copolymer sequence matters, not just composition. Composition-only features stay flat across a 130 °C range driven by blockiness; first-order sequence statistics cut that error about 40% (and ~5% on a held-out comonomer-pair split).
